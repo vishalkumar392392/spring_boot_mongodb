@@ -81,4 +81,9 @@ public class BookController {
 		return bookServiceImpl.bookByAuthorName();
 
 	}
+
+	@PostMapping("/aggregate")
+	public List<Book> saveBook(@RequestBody List<Book> books) {
+		return bookServiceImpl.aggregatebooks(books);
+	}
 }
